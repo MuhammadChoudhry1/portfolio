@@ -1,0 +1,116 @@
+/* --- Contact Section Split (Two Columns) --- */
+.contact-section-split {
+  width: 100%;
+  background: #f5f7fa;
+  padding: 80px 0 100px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0;
+}
+.contact-split-col {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.8rem 2.5rem 2.5rem 2.5rem;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+  min-width: 320px;
+  max-width: 500px;
+  margin: 0 0.5rem;
+}
+.contact-split-left {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.contact-split-right {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.contact-split-divider {
+  width: 2px;
+  background: #d1d5db;
+  margin: 0 0.5rem;
+  border-radius: 2px;
+  min-height: 320px;
+  align-self: stretch;
+}
+.contact-split-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.contact-split-underline {
+  width: 60px;
+  border-bottom: 4px solid #0077ff;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact-split-info {
+  font-size: 1.13rem;
+  color: #222b3a;
+  line-height: 1.7;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-top: 0.7rem;
+}
+.contact-split-info a {
+  color: #0077ff;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.contact-split-info a:hover {
+  color: #00eaff;
+}
+@media (max-width: 1100px) {
+  .contact-section-split {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  .contact-split-divider {
+    width: 80%;
+    min-height: 2px;
+    height: 2px;
+    margin: 2.5rem 0;
+    background: #d1d5db;
+    align-self: center;
+  }
+  .contact-split-col {
+    max-width: 600px;
+    width: 90%;
+    border-radius: 18px;
+    margin: 0 auto;
+  }
+  .contact-split-left, .contact-split-right {
+    border-radius: 18px;
+  }
+}
+@media (max-width: 700px) {
+  .contact-split-col {
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    min-width: 0;
+    max-width: 98vw;
+  }
+  .contact-split-title {
+    font-size: 1.3rem;
+  }
+  .contact-split-underline {
+    width: 40px;
+    border-bottom-width: 3px;
+  }
+  .contact-split-info {
+    font-size: 1rem;
+  }
+}

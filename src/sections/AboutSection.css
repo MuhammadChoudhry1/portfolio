@@ -1,0 +1,143 @@
+/* --- About Me Section Styles --- */
+.about-section {
+  background: #f0f2f6;
+  padding: 64px 0 80px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.about-container {
+  max-width: 1120px;
+  width: 90%;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+  padding: 2.8rem 2.5rem 2.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.about-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+.about-underline {
+  width: 60px;
+  border-bottom: 4px solid #0077ff;
+  margin-bottom: 1.5rem;
+}
+.about-content {
+  font-size: 1.18rem;
+  color: #222b3a;
+  line-height: 1.7;
+  text-align: left;
+}
+/* --- About Me Slideshow Styles --- */
+.about-slideshow-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2.2rem;
+  width: 100%;
+  margin-top: 1.2rem;
+}
+.about-arrow {
+  background: #f5f7fa;
+  border: 2px solid #0077ff;
+  color: #0077ff;
+  font-size: 2.1rem;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(0,119,255,0.07);
+}
+.about-arrow:hover {
+  background: #0077ff;
+  color: #fff;
+  border-color: #0077ff;
+}
+.about-slide-content {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.06);
+  padding: 2.2rem 2rem 2.2rem 2rem;
+  text-align: left;
+  font-size: 1.15rem;
+  color: #222b3a;
+  line-height: 1.7;
+}
+.about-slide-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 0.7rem;
+}
+/* --- Added styles for AboutSection writing/info --- */
+.project-card.horizontal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+}
+/* --- Professional AboutSection Info Styles --- */
+.project-title-main {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #0a174e;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.2rem;
+  text-shadow: 0 2px 8px rgba(10,23,78,0.07);
+}
+.project-year {
+  font-size: 1.08rem;
+  color: #0077ff;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.1rem;
+}
+.project-type {
+  font-size: 1.08rem;
+  color: #00b894;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.project-desc {
+  font-size: 1.13rem;
+  color: #222b3a;
+  margin-bottom: 0.8rem;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+@media (max-width: 700px) {
+  .about-slideshow-row {
+    gap: 0.7rem;
+  }
+  .about-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 1.4rem;
+  }
+  .about-slide-content {
+    padding: 1.1rem 0.7rem 1.1rem 0.7rem;
+    font-size: 1rem;
+  }
+}
