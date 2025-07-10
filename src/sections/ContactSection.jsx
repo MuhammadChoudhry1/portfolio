@@ -3,7 +3,7 @@ import './ContactSection.css';
 
 function ContactSection() {
   return (
-    <div className="contact-section-split">
+    <div className="contact-section-split" id="contact">
       <div className="contact-split-col contact-split-left">
         <h2 className="contact-split-title">Contact Details</h2>
         <div className="contact-split-underline" />

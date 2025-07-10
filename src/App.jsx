@@ -14,18 +14,18 @@ function App() {
   const projects = [
     {
       name: 'Finance App',
-      desc: 'The finance app was developed using a full-stack architecture with React Native and Expo for the cross-platform frontend and Flask (Python) for the backend. The app used Azure Data Studio with SQL Server (via Docker) for structured, relational data storage after migrating from MongoDB. The backend integrates JWT for secure authentication, bcrypt for password hashing, and Flask-CORS for cross-origin communication. For data analytics and machine learning, pandas, NumPy, and scikit-learn (RandomForestRegressor) were used to predict future savings. Visualizations were implemented using react-native-chart-kit and react-native-progress (including Pie, Line, and Bar charts), replacing Power BI due to macOS limitations. HTTP requests were handled using Axios, and AsyncStorage managed secure token storage on the frontend. Additional tools included Google OAuth 2.0, Google SMTP for email features, and Expo Notifications for alerts. The project followed an Agile Iterative Development approach with version control through GitHub.',
+      desc: 'The finance app was built with React Native (Expo) for the frontend and Flask (Python) for the backend. It started with MongoDB and later moved to SQL Server (via Docker) for better data handling. Authentication used JWT and bcrypt, with Axios and Flask-CORS connecting the frontend and backend. We added savings predictions using scikit-learn and visualized data with charts (pie, line, bar) using react-native-chart-kit. Google login, email via SMTP, and push notifications were also included. The project followed Agile methods and used GitHub for version control.',
       image: finalyearproject,
-      link: 'https://github.com/yourusername/energy-dashboard',
+      link: 'https://github.com/MuhammadChoudhry1/financeApp',
       year: 2025,
       type: 'Android Application',
       tech: ['Python ', 'React Native', 'SQL ', 'HTML/CSS'],
     },
     {
       name: 'TripAdvisor Reviews Using LSTM and CNN-Based Deep Neural Networks',
-      desc: 'The sentiment classification project was developed using Python 3.12, leveraging deep learning libraries such as TensorFlow and Keras to build and train two distinct models: Long Short-Term Memory (LSTM) and Convolutional Neural Network (CNN). Text preprocessing was carried out using NLTK for tasks such as punctuation removal, stopword filtering, tokenization, and padding. The neural models utilized Keras Embedding layer to convert text into dense 128-dimensional vectors. The LSTM architecture focused on capturing temporal dependencies using gated units, while the CNN architecture extracted local semantic features via 1D convolutional layers and pooling. Training was performed on a stratified 60/40 split with Adam optimizer and categorical crossentropy as the loss function. Evaluation metrics like accuracy, precision, recall, and F1-score were computed using Scikit-learn. The CNN model outperformed LSTM in generalization and class balance. Deployment was designed using a predict_sentiment() function, ready for integration with frameworks like Flask or FastAPI, supporting real-time inference in microservice architectures.',
+      desc: 'This sentiment analysis project was built with Python 3.12 using TensorFlow and Keras. It included two deep learning models: LSTM for understanding word sequences and CNN for capturing key phrases. Text was cleaned and prepared using NLTK (removing punctuation, stopwords, and tokenizing). Words were turned into 128-dimensional vectors using Keras Embedding. The models were trained using a 60/40 data split with the Adam optimizer. We used accuracy, precision, recall, and F1-score to evaluate performance, and CNN gave better results overall. The system includes a predict_sentiment() function, ready to plug into Flask or FastAPI for real-time use.',
       image: ml,
-      link: 'https://github.com/yourusername/task-manager',
+      link: 'https://github.com/MuhammadChoudhry1/TripAdvisor-Reviews-Using-LSTM-and-CNN-Based-Deep-Neural-Networks',
       year: 2025,
       type: 'Machine Learning Inference API',
       tech: ['Python'],
@@ -47,14 +47,14 @@ function App() {
     {
       title: 'Graduation',
       subtitle: 'Ulster University',
-      content: 'Graduated from Ulster University with a 2:2 grade in Computer Science. My academic journey included a strong focus on software engineering, web development, and collaborative projects. I am proud of my achievements and excited to bring my skills to new challenges in the tech industry.',
+      content: "I graduated from Ulster University with a degree in Computer Science (2:2). During my studies, I focused on software engineering, web development, and working on team projects. I'm proud of what I’ve learned and achieved, and I’m excited to apply my skills to new challenges in the tech world.",
       year: '2025',
       type: 'Education'
     },
     {
       title: 'About Me',
       subtitle: 'Personal Introduction',
-      content: 'I am a recent Computer Science graduate, eager to apply my coding knowledge and problem-solving skills developed through both academic projects and real-world experience. With nearly five years of hands-on experience across various programming languages, my studies at Belfast Met and university-level work have sharpened my technical capabilities. I thrive in collaborative environments, bringing strong communication and teamwork skills that help drive project success and enhance team performance.',
+      content: "I'm a recent Computer Science graduate with nearly five years of hands-on coding experience. Through my studies at Belfast Met and university, I’ve built solid technical skills and worked on a range of projects that strengthened my problem-solving abilities. I enjoy working with others, and my strong communication and teamwork skills help me contribute to successful, collaborative projects.",
       year: '2025',
       type: 'Profile'
     }

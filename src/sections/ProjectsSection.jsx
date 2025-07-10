@@ -3,7 +3,7 @@ import './ProjectsSection.css';
 
 function ProjectsSection({ projects, current, setCurrent }) {
   return (
-    <div className="projects-section">
+    <div className="projects-section" id="projects">
       <div className="projects-header-row">
         <div className="projects-header-align">
           <h2 className="projects-title">My Projects</h2>
@@ -17,8 +17,8 @@ function ProjectsSection({ projects, current, setCurrent }) {
             src={projects[current].image}
             alt={projects[current].name}
             style={{
-              width: '320px',
-              height: '220px',
+              width: '500px',
+              height: '340px',
               objectFit: 'cover',
               borderRadius: '18px',
               marginRight: '2.5rem',
