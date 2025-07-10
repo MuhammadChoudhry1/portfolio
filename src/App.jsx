@@ -35,7 +35,7 @@ function App() {
       desc: 'This Game Store API was built using ASP.NET Core 9.0 and C#. It’s a lightweight RESTful service that lets you manage a game collection without needing a database — everything’s stored in a local games.json file. You can add, view, update, or delete games using standard HTTP requests. It also includes a web interface built with HTML, CSS, and JavaScript for easy testing, and uses Swagger to automatically generate API documentation. Just run it with dotnet run, and it starts a server that’s ready to handle requests and manage your game data. CORS support is also included, so it works well with web apps from different origins.',
       image: restapi,
       link: 'https://github.com/MuhammadChoudhry1/GameApiASP.NET',
-      year: 2023,
+      year: 2025,
       type: 'Portfolio',
       tech: ['React', 'CSS'],
     },
