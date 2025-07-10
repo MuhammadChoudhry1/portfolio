@@ -37,7 +37,7 @@ function App() {
       link: 'https://github.com/MuhammadChoudhry1/GameApiASP.NET',
       year: 2025,
       type: 'Portfolio',
-      tech: ['React', 'CSS'],
+      tech: ['ASP.NET', 'C#', 'HTML/CSS', 'json'],
     },
   ];
 
