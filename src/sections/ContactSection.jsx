@@ -1,9 +1,46 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import './ContactSection.css';
 
 function ContactSection() {
+  const [ref, isVisible, hasExited] = useScrollAnimation(0.2);
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        duration: 0.8,
+        staggerChildren: 0.2
+      }
+    },
+    exit: {
+      opacity: 0,
+      y: -50,
+      transition: {
+        duration: 1.2,
+        staggerChildren: 0.3
+      }
+    }
+  };
+
+  const getAnimationState = () => {
+    if (hasExited) return "exit";
+    if (isVisible) return "visible";
+    return "hidden";
+  };
+
   return (
-    <div className="contact-section-split" id="contact">
+    <motion.div 
+      className="contact-section-split" 
+      id="contact"
+      ref={ref}
+      variants={containerVariants}
+      initial="hidden"
+      animate={getAnimationState()}
+    >
       <div className="contact-split-col contact-split-left">
         <h2 className="contact-split-title">Contact Details</h2>
         <div className="contact-split-underline" />
@@ -21,7 +58,7 @@ function ContactSection() {
           <div><strong>GitHub:</strong> <a href="https://github.com/MuhammadChoudhry1" target="_blank" rel="noopener noreferrer">MuhammadChoudhry1</a></div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

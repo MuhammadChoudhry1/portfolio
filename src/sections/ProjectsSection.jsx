@@ -1,16 +1,68 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import './ProjectsSection.css';
 
 function ProjectsSection({ projects, current, setCurrent }) {
+  const [ref, isVisible, hasExited] = useScrollAnimation(0.2);
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        duration: 0.8,
+        staggerChildren: 0.2
+      }
+    },
+    exit: {
+      opacity: 0,
+      y: -50,
+      transition: {
+        duration: 1.2,
+        staggerChildren: 0.3,
+        staggerDirection: -1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.6 }
+    },
+    exit: {
+      opacity: 0,
+      y: -30,
+      transition: { duration: 0.9 }
+    }
+  };
+
+  const getAnimationState = () => {
+    if (hasExited) return "exit";
+    if (isVisible) return "visible";
+    return "hidden";
+  };
+
   return (
-    <div className="projects-section" id="projects">
-      <div className="projects-header-row">
+    <motion.div 
+      className="projects-section" 
+      id="projects"
+      ref={ref}
+      variants={containerVariants}
+      initial="hidden"
+      animate={getAnimationState()}
+    >
+      <motion.div className="projects-header-row" variants={itemVariants}>
         <div className="projects-header-align">
           <h2 className="projects-title">My Projects</h2>
           <div className="projects-underline" />
         </div>
-      </div>
-      <div className="projects-slideshow-row">
+      </motion.div>
+      <motion.div className="projects-slideshow-row" variants={itemVariants}>
         <div className="projects-slideshow-content">
           <img
             className="projects-image"
@@ -43,8 +95,8 @@ function ProjectsSection({ projects, current, setCurrent }) {
             </div>
           </div>
         </div>
-      </div>
-      <div className="projects-dots">
+      </motion.div>
+      <motion.div className="projects-dots" variants={itemVariants}>
         {projects.map((_, idx) => (
           <span
             key={idx}
@@ -52,11 +104,11 @@ function ProjectsSection({ projects, current, setCurrent }) {
             onClick={() => setCurrent(idx)}
           />
         ))}
-      </div>
+      </motion.div>
       {/* visually hidden for layout only */}
       {/* Intentionally left blank for layout */}
       <div style={{ position: 'absolute', left: '-9999px', top: '-9999px' }}></div>
-    </div>
+    </motion.div>
   );
 }
 
