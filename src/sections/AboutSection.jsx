@@ -4,7 +4,7 @@ import './AboutSection.css';
 
 function AboutSection({ aboutSlides, aboutSlide, setAboutSlide }) {
   return (
-    <div className="about-section" id="about">
+    <div className="about-section">
       <div className="about-container">
         <h2 className="about-title">About Me</h2>
         <div className="about-underline" />
